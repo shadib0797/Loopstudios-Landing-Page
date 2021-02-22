@@ -1,0 +1,444 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font: 0.9375rem 'Josefin Sans', sans-serif;
+}
+
+section{
+  padding: 8rem;
+}
+
+/***** TOP Section *****/
+
+#top{
+  background: url("./images/desktop/image-hero.jpg") no-repeat;
+  background-size: cover;
+  color: #fff;
+  padding-top: 3rem;
+  padding-bottom: 8rem;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.toggle, .close{
+  padding: 8px 4px 4px;
+  display:none;
+}
+
+.toggle:hover, .close:hover{
+  border: 2px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+
+.nav-bar{
+  align-items: center;
+  display: flex;
+}
+
+.nav-bar p{
+  position: relative;
+  font-weight: bold;
+  margin-right: 2rem;
+}
+
+.nav-bar p:hover{
+  cursor: pointer;
+}
+
+
+.nav-bar p:hover::before{
+  content: "";
+  position: absolute;
+  border-bottom: 2px solid #fff;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 1.5rem;
+}
+
+.nav-bar p:last-child{
+  margin-right: 0;
+}
+
+.big-heading{
+  border: 2px solid #fff;
+  font-size: 4rem;
+  letter-spacing: 2px;
+  margin-top: 8rem;
+  width: 60%;
+}
+
+.big-heading p{
+  padding: 2rem 2.5rem ;
+}
+
+.big-heading p br{
+  display: none;
+}
+
+/***** Feature Section *****/
+
+#feature{
+  display: flex;
+  position: relative;
+}
+
+#feature img{
+  width: 65%;
+}
+
+.content{
+  align-self: flex-end;
+  background-color: #fff;
+  padding: 7rem 0 0 7rem;
+  position: absolute;
+  right: 8rem;
+  width: 40%;
+  z-index: 1;
+}
+
+.content > h1{
+  font-size: 3rem;
+  font-weight: normal;
+  margin-bottom: 1.5rem;
+}
+
+.content p{
+  color: #696969;
+  font: 0.9375rem 'Alata', sans-serif;
+  line-height: 1.75;
+}
+
+/***** Creations Section *****/
+
+#creations{
+  padding-top: 0;
+}
+
+.bottom{
+  display: none;
+}
+
+.header{
+  display: flex;
+  margin-bottom: 2rem;
+  justify-content: space-between;
+}
+
+.header h1{
+  font-size: 2.5rem;
+  font-weight: normal;
+}
+
+.header .top, .bottom{
+  align-self: center;
+  border: 1px solid #000;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding: 8px 24px;
+}
+
+.header .top:hover, .bottom:hover{
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.images{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+}
+
+.mobile{
+  display: none;
+}
+
+.images div{
+  position: relative;
+}
+
+.images div:hover{
+  cursor: pointer;
+  opacity: 0.4;
+}
+
+.images div img{
+  width: 100%;
+  height: 100%;
+}
+
+.images div p{
+  font-size: 1.5rem;
+  color: #fff;
+  padding: 1.5rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+/***** Footer *****/
+
+footer{
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 8rem;
+}
+
+.left{
+  align-self: flex-start;
+}
+
+.left .logo{
+  margin-bottom: 1rem;
+}
+
+.right{
+  align-self: flex-end;
+}
+
+.bottom-nav-bar{
+
+}
+
+.icons{
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+.icons img{
+  margin-right: 1rem;
+}
+
+.copyright{
+  color: #8c8c8c;
+  font-size: 12px;
+}
+
+@media only screen and (max-width:1275px) {
+
+  .big-heading p br{
+    display: block;
+  }
+
+  .content{
+    padding: 5rem 0 0 5rem;
+  }
+
+}
+
+@media only screen and (max-width:1200px) {
+  section{
+    padding: 6rem;
+  }
+
+  footer{
+    padding: 2rem 6rem;
+  }
+
+  .big-heading{
+    width:65%;
+  }
+
+  .content{
+    right: 6rem;
+  }
+
+  .content h1{
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (max-width:1024px) {
+  section{
+    padding: 6rem 3rem;
+  }
+
+  footer{
+    padding: 2rem 3rem;
+  }
+
+  #feature img{
+    width: 50%;
+  }
+
+  .big-heading{
+    font-size: 3rem;
+    width:70%;
+  }
+
+  .content{
+    position: static;
+    width: 50%;
+    padding: 0 0 0 2rem ;
+  }
+
+  .content h1, .header h1{
+    font-size: 2rem;
+  }
+
+  .images div p{
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-width:768px) {
+
+    /***** TOP Section *****/
+
+  #top{
+    background: url("./images/mobile/image-hero.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  .nav p:hover::before{
+    width: 90%;
+  }
+
+  .toggle{
+    display: block;
+    align-self: center;
+  }
+
+  .close{
+    align-self: center;
+    display:none;
+    position: fixed;
+    right: 3rem;
+    z-index: 4;
+  }
+
+  .big-heading{
+    font-size: 2.5rem;
+    width:100%;
+  }
+
+  .big-heading p{
+    padding: 2rem ;
+  }
+
+  .logo{
+    position: relative;
+    z-index: 4;
+  }
+
+  .nav{
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: fixed;
+    padding: 0 3rem;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    visibility: hidden;
+  }
+
+  .nav p{
+    font: 2rem 'Josefin Sans', sans-serif;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+  }
+
+
+  /***** Feature Section *****/
+
+  #feature{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #feature img{
+    width: 100%;
+  }
+
+  .content{
+    width: 100%;
+    padding: 3rem 1rem 0 ;
+  }
+
+  /***** Creations Section *****/
+
+  .header{
+    justify-content: center;
+  }
+
+  .top{
+    display: none;
+  }
+
+  .bottom{
+    display: block;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    margin-top: 24px;
+  }
+
+  .images{
+    grid-template-columns: 1fr;
+    grid-row-gap: 2rem;
+  }
+
+  .images div p{
+    font-size: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .desktop{
+    display:none;
+  }
+
+  .mobile{
+    display: block;
+  }
+
+  /***** Footer *****/
+
+  footer{
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .left, .right{
+    align-self: center;
+  }
+
+  .left .nav-bar{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left .logo{
+    margin-bottom: 2rem;
+    z-index: 1;
+  }
+
+  .left .nav-bar p{
+    margin: 0 0 1.5rem;
+  }
+
+  .right{
+    margin-top: 2rem;
+  }
+
+}
